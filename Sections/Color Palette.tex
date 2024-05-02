@@ -1,0 +1,28 @@
+\section{Color Palette}
+
+\automateframe{Main Colors}{
+    \begin{table}[]
+        \small
+        \centering
+        \def \arraystretch{1.1}
+        \begin{tabular}{|>{\columncolor[gray]{0.2}}c|>{\columncolor[gray]{0.2}}p{70mm}|}
+        \hline
+          \textbf{Color} & \textbf{Usage}  \\\hline
+           \testcolor{maincolor} & $\blacktriangleright$ Table of Contents Frame Background Color \newline $\blacktriangleright$ Frame Text Font Color \newline $\blacktriangleright$ Block Title Font Color\\ \hline
+           \testcolor{toctxt} & $\blacktriangleright$ Table of Contents Font Color \newline $\blacktriangleright$ Frame Background Color \newline $\blacktriangleright$ Block Body Font Color\\ \hline
+           \testcolor{frmtxt} & Frame Environment Color \\ \hline
+           \testcolor{blkc} & Block Title Background Color \\ \hline
+           \testcolor{statalegrey} & Block Body Background Color \\ \hline
+        \end{tabular}
+        \caption{Colors}
+        \label{tab:colors}
+    \end{table}
+}
+
+\automateframe{Customization}{
+    \begin{itemize}
+        \item To change the color of any element, replace the existing color in \texttt{beamertheme\_statale.sty}.
+        \item New colors can be defined in \texttt{statale\_colors.sty} using RGB and CMYK values.
+        \item \hrefcol{https://colorhunt.co/}{This} is a good resource for finding a color palette.
+    \end{itemize}
+}

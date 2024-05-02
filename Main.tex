@@ -1,0 +1,89 @@
+\documentclass{beamer}
+
+\usepackage{amsfonts,amsmath,oldgerm}
+\usepackage{listings}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{multicol}
+\usepackage{subcaption}
+\usepackage{etoolbox}
+\usepackage{relsize}
+\usepackage{ragged2e}
+
+\makeatletter
+\patchcmd{\itemize}{\raggedright}{\justifying}{}{}
+\patchcmd{\beamer@enum@}{\raggedright}{\justifying}{}{}
+\patchcmd{\@@description}{\raggedright}{\justifying}{}{}
+\makeatother
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage[ruled,vlined]{algorithm2e}
+\SetAlCapNameFnt{\scriptsize}
+\SetAlCapFnt{\scriptsize}
+\SetAlFnt{\scriptsize}
+
+\usepackage{graphicx}
+\usepackage[scale=2]{ccicons}
+\usepackage{qrcode}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{positioning}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{colortbl}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+\usepackage{minted}
+\newminted{bash}{}
+\newminted{latex}{}
+\newmintinline{bash}{}
+\newmintinline{latex}{}
+\newcommand{\texdoc}[2]{\href{#2}{\bashinline|texdoc #1|}}
+
+
+\usetheme{_statale}
+\usefonttheme[onlymath]{serif}
+
+
+\setbeamertemplate{caption}[numbered]
+\newcommand{\testcolor}[1]{\colorbox{#1}{\textcolor{#1}{test}}~\texttt{#1}}
+\newcommand{\hrefcol}[2]{\textcolor{frmtxt}{\href{#1}{#2}}}
+
+% ==================///==================///==================///
+% ==================/// Inicio
+% ==================///==================///==================///
+
+
+\setbeamertemplate{title page}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth,height=\paperheight]{assets/cartelcharla.jpg}
+        };
+    \end{tikzpicture}
+}
+
+% ==================///==================///==================///
+% ==================/// Comenzar presentación
+% ==================///==================///==================///
+
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning}
+\begin{document}
+\maketitle
+
+
+
+\input{Sections/Cómo usar LaTeX}
+\input{Sections/Estructura básica}
+\input{Sections/Formato avanzado}
+\input{Sections/Usos Interesantes}
+
+% ==================///==================///==================///
+% ==================/// Terminar presentación
+% ==================///==================///==================///
+
+\backmatter
+\end{document}

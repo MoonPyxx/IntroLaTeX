@@ -1,0 +1,64 @@
+\section{Estructura básica}
+
+\begin{frame}[fragile]{Hola, \LaTeX!}
+  \begin{columns}
+    \begin{column}{.7\linewidth}
+      \begin{itemize}
+        \item Crea \mintinline{text}|hola.tex|
+        \item Compilar (desde el IDE/editor de \LaTeX / terminal)
+        \item Abrir \mintinline{text}|hola.pdf| para ver el resultado
+      \end{itemize}
+    \end{column}
+    \begin{column}{.3\linewidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=150]{./assets/ejemplo1.png}
+        \caption{Compilación de hola.tex en Overleaf}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+\begin{frame}[fragile]{Comandos, comentarios y entornos}
+  \begin{itemize}
+    \item \latexinline|%| Para comenzar un comentario / comentar esa línea
+    \item \latexinline|\| Ejecuta un comando
+          \begin{latexcode}
+            \command % comando
+            \command{arg} % comando con argumentos, puede haber varios
+            \command[arg opc]{arg} % [] para argumentos opcionales
+          \end{latexcode}
+    \item \latexinline|\begin{} ... \end{}| entorno
+          \begin{latexcode}
+            \begin{entorno}
+            \end{entorno}
+          \end{latexcode}
+  \end{itemize}
+\end{frame}
+\begin{frame}[fragile]{Estructura de archivos}
+  \begin{itemize}
+  \begin{latexcode}
+            \documentclas{arg} % Especificar plantilla documento
+\end{latexcode}
+    \item Algunas plantillas son:
+     \setlength{\multicolsep}{0pt}
+          \setlength{\columnsep}{0pt}
+          \begin{multicols}{3}
+            \begin{itemize}
+              \item \texttt{article} 
+              \item \texttt{book}
+              \item \texttt{report}
+              \item \texttt{letter}
+              \item \texttt{beamer} \textsmaller{(presentaciones)}}
+              \item[]
+            \end{itemize}
+          \end{multicols}
+  \end{itemize}
+\end{frame}
+\begin{frame}[fragile]{Estructura de archivos}
+  \begin{itemize}
+    \item La región después de \latexinline|\documentclas| y antes \latexinline|\begin{document}| es el \alert{preámbulo}.
+    \item Para cargar paquetes, ejemplo:~\latexinline|\usepackage{amsmath}|
+    \item El bloque de texto comienza con \latexinline|\begin{document}|.
+    \item Finalmente, \latexinline|\end{document}| determina el fin del documento.
+  \end{itemize}
+\end{frame}
